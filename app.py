@@ -16,7 +16,7 @@ def prediction(SepalLengthCm, SepalWidthCm, PetalLengthCm, PetalWidthCm):
 
 def main():
     st.title("SpecieScanner Apps")
-    st.title("Prediksi Spesies Bunga Iris Menggunakan Algoritma K-Nearest Neighbour (KNN)")
+    st.header("Pemindai Spesies Bunga Iris Menggunakan Algoritma K-Nearest Neighbour (KNN)")
     
     st.markdown("By: Agung Gunawan")
     st.write('\n')
@@ -25,7 +25,7 @@ def main():
     st.write('\n')
     st.write('\n')
     
-    st.sidebar.markdown("<strong>Silahkan input data pada form berikut :</strong>", 
+    st.sidebar.markdown("<strong>Sebelum memindai, isi data berikut :</strong>", 
                         unsafe_allow_html=True)
     SepalLengthCm = st.sidebar.number_input(label="Sepal Length (cm)", step=1., format="%.1f")
     SepalWidthCm = st.sidebar.number_input(label="Sepal Width (cm)", step=1., format="%.1f")
@@ -49,7 +49,7 @@ def main():
         st.write('\n')
         st.write('\n')
         st.write('\n')
-        with st.spinner('Sedang Memproses'):
+        with st.spinner('Sedang Memindai...'):
             time.sleep(2)
         st.success(f'Sukses, diprediksi spesies {result_predict}.')
         
