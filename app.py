@@ -44,10 +44,10 @@ def main():
         
         st.write('\n')
         st.write('\n')
-        st.subheader('Berdasarkan atribut Sepal Length, SepalWidth, Petal Length, dan Petal Width, akan menghasilkan target/class Species :')
+        st.subheader('Sepal Length, SepalWidth, Petal Length, dan Petal Width vs Species :')
         
         if st.checkbox("Tampilkan/Sembunyikan Line Chart") :
-            st.line_chart( data[['SepalLengthCm','SepalWidthCm','PetalLengthCm','PetalWidthCm','Species']].head(20) )
+            st.line_chart( data[['SepalLengthCm','SepalWidthCm','PetalLengthCm','Species']].head(10) )
         
     else :
         st.header("Pemindai Spesies Bunga Iris Menggunakan Algoritma K-Nearest Neighbour (KNN)")
