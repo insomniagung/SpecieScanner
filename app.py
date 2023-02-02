@@ -18,7 +18,7 @@ def prediction(SepalLengthCm, SepalWidthCm, PetalLengthCm, PetalWidthCm):
 
 def main():
 
-    app_mode = st.sidebar.selectbox('MENU', ['Home', 'Scan'])
+    app_menu = st.sidebar.selectbox('MENU', ['Home', 'Scan'])
     
     if app_menu == 'Home':
         st.write("Welcome to the Home page")
