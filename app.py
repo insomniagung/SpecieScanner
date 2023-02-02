@@ -50,9 +50,16 @@ def main():
         if st.checkbox("Tampilkan/Sembunyikan Scatter Plot") :
             #st.line_chart( data[['SepalLengthCm','SepalWidthCm','PetalLengthCm','PetalWidthCm','Species']].head(10) )
             
-            plt.scatter(data['SepalLengthCm'], data['SepalWidthCm'], c=data['Species'], cmap='viridis')
-            plt.xlabel('Sepal Length (Cm)')
-            plt.ylabel('Sepal Width (Cm)')
+            fig, ax = plt.subplots(2, 2, figsize=(10, 8))
+            ax[0, 0].scatter(data['SepalLengthCm'].head(10), data['SepalWidthCm'].head(10), c=data['Species'].head(10), cmap='viridis')
+            ax[0, 0].set(xlabel='Sepal Length (Cm)', ylabel='Sepal Width (Cm)')
+            ax[0, 1].scatter(data['PetalLengthCm'].head(10), data['PetalWidthCm'].head(10), c=data['Species'].head(10), cmap='viridis')
+            ax[0, 1].set(xlabel='Petal Length (Cm)', ylabel='Petal Width (Cm)')
+            ax[1, 0].scatter(data['SepalLengthCm'].head(10), data['PetalLengthCm'].head(10), c=data['Species'].head(10), cmap='viridis')
+            ax[1, 0].set(xlabel='Sepal Length (Cm)', ylabel='Petal Length (Cm)')
+            ax[1, 1].scatter(data['SepalWidthCm'].head(10), data['PetalWidthCm'].head(10), c=data['Species'].head(10), cmap='viridis')
+            ax[1, 1].set(xlabel='Sepal Width (Cm)', ylabel='Petal Width (Cm)')
+            plt.tight_layout()
             st.pyplot()
         
     else :
