@@ -31,7 +31,7 @@ def main():
         st.write('\n')
         
         st.markdown('Dataset :')
-        data = pd.read_csv('loan_dataset.csv')
+        data = pd.read_csv('iris.csv')
         st.write(data.head())
         
         st.mardkdown('Berdasarkan atribut Sepal Length, SepalWidth, Petal Length, dan Petal Width, akan menghasilkan target/class Species :')
