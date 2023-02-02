@@ -23,11 +23,24 @@ def main():
     app_menu = st.sidebar.selectbox('MENU', ['Home', 'Scan'])
     
     if app_menu == 'Home':
-        st.write("Welcome to the Home page")
+        st.title("SpecieScan Apps")
+        st.markdown("Selamat Datang.")
+        
+        #st.image('assets/loan_image.jpg')
+        st.write('\n')
+        st.write('\n')
+        
+        st.markdown('Dataset :')
+        data = pd.read_csv('loan_dataset.csv')
+        st.write(data.head())
+        
+        st.mardkdown('Berdasarkan atribut Sepal Length, SepalWidth, Petal Length, dan Petal Width, akan menghasilkan target/class Species :')
+        st.line_chart(data[['SepalLengthCm','SepalWidthCm','PetalLengthCm','PetalWidthCm','Species']].head(10))
+        
         
     else :
         st.header("Pemindai Spesies Bunga Iris Menggunakan Algoritma K-Nearest Neighbour (KNN)")
-        st.markdown("By: Agung Gunawan")
+        st.markdown("By: Agung Gunawan | https://github.com/insomniagung/")
         st.write('\n')
         st.image("images/irisflowers.png", width=700)
         st.write('\n')
