@@ -18,8 +18,8 @@ def prediction(SepalLengthCm, SepalWidthCm, PetalLengthCm, PetalWidthCm):
 
 def main():
     st.sidebar.title("SpecieScanner Apps")
-        st.sidebar.write('\n')
-        st.sidebar.write('\n')
+    st.sidebar.write('\n')
+    st.sidebar.write('\n')
         
     app_menu = st.sidebar.selectbox('MENU', ['Home', 'Scan'])
     
