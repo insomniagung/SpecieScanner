@@ -18,7 +18,7 @@ def main():
     st.title("SpecieScanner Apps")
     st.header("Pemindai Spesies Bunga Iris Menggunakan Algoritma K-Nearest Neighbour (KNN)")
     
-    st.markdown("By: Agung Gunawan")
+    st.subheader("By: Agung Gunawan")
     st.write('\n')
     
     st.image("images/irisflowers.png", width=700)
