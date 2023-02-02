@@ -15,7 +15,16 @@ def prediction(SepalLengthCm, SepalWidthCm, PetalLengthCm, PetalWidthCm):
     return prediction
 
 def main():
-    #st.title("SpecieScanner Apps")
+    
+    menu = ['Home','Scan']
+    app_menu = st.sidebar.selectbox[menu]
+    
+    if app_menu == 'Home':
+        def welcome():
+            print("Welcome")
+            return welcome
+        
+    elif app_menu == 'Scan' :
     st.header("Pemindai Spesies Bunga Iris Menggunakan Algoritma K-Nearest Neighbour (KNN)")
     st.markdown("By: Agung Gunawan")
     st.write('\n')
@@ -24,6 +33,7 @@ def main():
     st.write('\n')
     
     st.sidebar.title("SpecieScanner Apps")
+    st.sidebar.write('\n')
     st.sidebar.write('\n')
     st.sidebar.markdown("<strong>Sebelum memindai, isi data berikut :</strong>", 
                         unsafe_allow_html=True)
