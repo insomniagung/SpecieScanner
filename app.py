@@ -19,7 +19,6 @@ def prediction(SepalLengthCm, SepalWidthCm, PetalLengthCm, PetalWidthCm):
 def main():
     st.sidebar.title("SpecieScanner Apps")
     st.sidebar.write('\n')
-    st.sidebar.write('\n')
         
     app_menu = st.sidebar.selectbox('MENU', ['Home', 'Scan'])
     
@@ -33,7 +32,9 @@ def main():
         st.image("images/irisflowers.png", width=700)
         st.write('\n')
         st.write('\n')
-    
+        
+        st.sidebar.write('\n')
+        st.sidebar.write('\n')
         st.sidebar.markdown("<strong>Sebelum memindai, isi data berikut :</strong>", unsafe_allow_html=True)
     
         SepalLengthCm = st.sidebar.number_input(label="Sepal Length (cm)", step=1., format="%.1f")
