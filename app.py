@@ -42,9 +42,12 @@ def main():
         if st.checkbox("Tampilkan/Sembunyikan hanya 10 Data Terakhir"):
             st.write(data.tail(10))
         
+        st.mardkdown('Berdasarkan atribut Sepal Length, SepalWidth, Petal Length, dan Petal Width, akan menghasilkan target/class Species :')
         if st.checkbox("Tampilkan/Sembunyikan Line Chart") :
-            st.mardkdown('Berdasarkan atribut Sepal Length, SepalWidth, Petal Length, dan Petal Width, akan menghasilkan target/class Species :')
-            st.line_chart(data[['SepalLengthCm','SepalWidthCm','PetalLengthCm','PetalWidthCm','Species']].head(10))
+            chart_data = pd.DataFrame(np.random.randn(20, 3), columns=['SepalLengthCm','SepalWidthCm','PetalLengthCm','PetalWidthCm','Species'])
+            st.line_chart(chart_data)
+            
+            #st.line_chart(data[['SepalLengthCm','SepalWidthCm','PetalLengthCm','PetalWidthCm','Species']].head(10))
         
     else :
         st.header("Pemindai Spesies Bunga Iris Menggunakan Algoritma K-Nearest Neighbour (KNN)")
