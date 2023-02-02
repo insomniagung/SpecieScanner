@@ -4,12 +4,12 @@ import pickle
 import streamlit as st
 import time
 
-@st.cache(suppress_st_warning = True)
-
 pickle_in = open('knn_model.pkl', 'rb')
 knn = pickle.load(pickle_in)
 
 st.set_page_config(page_title="SpecieScanner Apps")
+
+@st.cache(suppress_st_warning = True)
 
 def prediction(SepalLengthCm, SepalWidthCm, PetalLengthCm, PetalWidthCm):
     prediction = knn.predict([[SepalLengthCm, SepalWidthCm, PetalLengthCm, PetalWidthCm]])
