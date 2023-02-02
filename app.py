@@ -4,6 +4,7 @@ import pickle
 import streamlit as st
 import time
 import matplotlib.pyplot as plt
+import seaborn as sns
 
 pickle_in = open('knn_model.pkl', 'rb')
 knn = pickle.load(pickle_in)
@@ -47,26 +48,11 @@ def main():
         st.write('\n')
         st.subheader('Sepal Length, SepalWidth, Petal Length, dan Petal Width vs Species :')
         
-        if st.checkbox("Tampilkan/Sembunyikan Scatter Plot"):
-            plt.scatter(data['SepalLengthCm'], data['SepalWidthCm'], c=data['PetalLengthCm'], cmap='viridis')
-            plt.xlabel('Sepal Length (cm)')
-            plt.ylabel('Sepal Width (cm)')
+        if st.checkbox("Tampilkan/Sembunyikan Scatter Matrix"):
+            sns.pairplot(data, hue='Species')
             st.pyplot()
         
-        if st.checkbox("Tampilkan/Sembunyikan Scatter Plot") :
-            #st.line_chart( data[['SepalLengthCm','SepalWidthCm','PetalLengthCm','PetalWidthCm','Species']].head(10) )
-            
-            fig, ax = plt.subplots(2, 2, figsize=(10, 8))
-            ax[0, 0].scatter(data['SepalLengthCm'].head(10), data['SepalWidthCm'].head(10), c=data['Species'].head(10), cmap='viridis')
-            ax[0, 0].set(xlabel='Sepal Length (Cm)', ylabel='Sepal Width (Cm)')
-            ax[0, 1].scatter(data['PetalLengthCm'].head(10), data['PetalWidthCm'].head(10), c=data['Species'].head(10), cmap='viridis')
-            ax[0, 1].set(xlabel='Petal Length (Cm)', ylabel='Petal Width (Cm)')
-            ax[1, 0].scatter(data['SepalLengthCm'].head(10), data['PetalLengthCm'].head(10), c=data['Species'].head(10), cmap='viridis')
-            ax[1, 0].set(xlabel='Sepal Length (Cm)', ylabel='Petal Length (Cm)')
-            ax[1, 1].scatter(data['SepalWidthCm'].head(10), data['PetalWidthCm'].head(10), c=data['Species'].head(10), cmap='viridis')
-            ax[1, 1].set(xlabel='Sepal Width (Cm)', ylabel='Petal Width (Cm)')
-            plt.tight_layout()
-            st.pyplot()
+        #st.line_chart( data[['SepalLengthCm','SepalWidthCm','PetalLengthCm','PetalWidthCm','Species']].head(10) )
         
     else :
         st.header("Pemindai Spesies Bunga Iris Menggunakan Algoritma K-Nearest Neighbour (KNN)")
