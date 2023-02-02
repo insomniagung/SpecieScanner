@@ -4,6 +4,8 @@ import pickle
 import streamlit as st
 import time
 
+@st.cache(suppress_st_warning = True)
+
 pickle_in = open('knn_model.pkl', 'rb')
 knn = pickle.load(pickle_in)
 
@@ -16,12 +18,12 @@ def prediction(SepalLengthCm, SepalWidthCm, PetalLengthCm, PetalWidthCm):
 
 def main():
 
-    app_menu = st.sidebar.selectbox['MENU', ['Home','Scan']]
+    app_mode = st.sidebar.selectbox('MENU', ['Home', 'Scan'])
     
     if app_menu == 'Home':
         st.write("Welcome to the Home page")
         
-    elif app_menu == 'Scan' :
+    else :
         st.header("Pemindai Spesies Bunga Iris Menggunakan Algoritma K-Nearest Neighbour (KNN)")
         st.markdown("By: Agung Gunawan")
         st.write('\n')
