@@ -26,7 +26,8 @@ def main():
     
     if app_menu == 'Home':
         st.title("SpecieScan Apps")
-        st.header("Selamat Datang! Aplikasi ini berfungsi untuk memindai Spesies Bunga Iris berdasarkan Algoritma K-Nearest Neighbour (KNN)")
+        st.header("Selamat Datang!")
+        st.header("Aplikasi ini berfungsi untuk memindai Spesies Bunga Iris berdasarkan Algoritma K-Nearest Neighbour (KNN)")
         st.markdown("By: Agung Gunawan | https://github.com/insomniagung/")
         st.write('\n')
         st.write('\n')        
