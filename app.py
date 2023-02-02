@@ -42,7 +42,7 @@ def main():
         if st.checkbox("Tampilkan/Sembunyikan hanya 10 Data Terakhir"):
             st.write(data.tail(10))
         
-        st.mardkdown('Berdasarkan atribut Sepal Length, SepalWidth, Petal Length, dan Petal Width, akan menghasilkan target/class Species :')
+        st.markdown('Berdasarkan atribut Sepal Length, SepalWidth, Petal Length, dan Petal Width, akan menghasilkan target/class Species :')
         
         if st.checkbox("Tampilkan/Sembunyikan Line Chart") :
             chart_data = pd.DataFrame(np.random.randn(20, 3), data=['SepalLengthCm','SepalWidthCm','PetalLengthCm','PetalWidthCm','Species'])
