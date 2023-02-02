@@ -28,7 +28,7 @@ def main():
         st.title("SpecieScan Apps")
         st.markdown("Selamat Datang.")
         
-        #st.image('assets/loan_image.jpg')
+        st.image('images/homepic.jpg')
         st.write('\n')
         st.write('\n')
         
