@@ -28,7 +28,8 @@ def main():
         st.title("SpecieScan Apps")
         st.header("Selamat Datang! Aplikasi ini berfungsi untuk memindai Spesies Bunga Iris berdasarkan Algoritma K-Nearest Neighbour (KNN)")
         st.markdown("By: Agung Gunawan | https://github.com/insomniagung/")
-        
+        st.write('\n')
+        st.write('\n')        
         st.image('images/homepic.jpg')
         st.write('\n')
         st.write('\n')
@@ -58,7 +59,7 @@ def main():
         
     else :
         st.header("Tekan tombol pindai untuk mengetahui hasilnya.")
-        #st.markdown("By: Agung Gunawan | https://github.com/insomniagung/")
+        #st.markdown("By: Agung Gunawan | https://github.com/insomniagung/SpecieScanner/")
         st.write('\n')
         st.image("images/irisflowers.png", width=700)
         st.write('\n')
