@@ -17,10 +17,8 @@ def prediction(SepalLengthCm, SepalWidthCm, PetalLengthCm, PetalWidthCm):
 def main():
     st.title("SpecieScanner Apps")
     st.header("Pemindai Spesies Bunga Iris Menggunakan Algoritma K-Nearest Neighbour (KNN)")
-    
-    st.subheader("By: Agung Gunawan")
+    st.markdown("By: Agung Gunawan")
     st.write('\n')
-    
     st.image("images/irisflowers.png", width=700)
     st.write('\n')
     st.write('\n')
