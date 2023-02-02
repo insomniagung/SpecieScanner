@@ -34,7 +34,7 @@ def main():
     result =""
     
     st.write('\n')
-    if st.button("PREDIKSI"):
+    if st.button("PINDAI SPESIES"):
         result = prediction(SepalLengthCm, SepalWidthCm, PetalLengthCm, PetalWidthCm)
         for result_predict in result:
             print(result_predict)
@@ -51,7 +51,7 @@ def main():
         st.write('\n')
         with st.spinner('Sedang Memindai...'):
             time.sleep(2)
-        st.success(f'Sukses, diprediksi spesies {result_predict}.')
+        st.success(f'Sukses, berdasarkan sepal dan petal, iris termasuk spesies {result_predict}.')
         
         if result_predict == "Iris Setosa":
             st.image("images/iris-setosa.png", width=350)
