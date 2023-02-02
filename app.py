@@ -48,6 +48,7 @@ def main():
         st.write('\n')
         st.subheader('Sepal Length, SepalWidth, Petal Length, dan Petal Width vs Species :')
         
+        st.set_option('deprecation.showPyplotGlobalUse', False)
         if st.checkbox("Tampilkan/Sembunyikan Scatter Matrix"):
             sns.pairplot(data, hue='Species')
             st.pyplot()
