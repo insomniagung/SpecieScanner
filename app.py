@@ -47,11 +47,10 @@ def main():
         st.write('\n')
         st.subheader('Sepal Length, SepalWidth, Petal Length, dan Petal Width vs Species :')
         
-        if st.checkbox("Tampilkan/Sembunyikan Bar Chart"):
-            species_counts = data['Species'].value_counts()
-            plt.bar(species_counts.index, species_counts.values)
-            plt.xlabel('Species')
-            plt.ylabel('Count')
+        if st.checkbox("Tampilkan/Sembunyikan Scatter Plot"):
+            plt.scatter(data['SepalLengthCm'], data['SepalWidthCm'], c=data['PetalLengthCm'], cmap='viridis')
+            plt.xlabel('Sepal Length (cm)')
+            plt.ylabel('Sepal Width (cm)')
             st.pyplot()
         
         if st.checkbox("Tampilkan/Sembunyikan Scatter Plot") :
