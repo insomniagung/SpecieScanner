@@ -68,8 +68,8 @@ def main():
             else:
                 st.image("images/iris-virginica.png", width=350)
             
-            if __name__=='__main__':
-                main()
+if __name__=='__main__':
+    main()
         
 #menghilangkan burger dan made with streamlit
 hide_streamlit_style = """
