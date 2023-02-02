@@ -1,4 +1,5 @@
 import pandas as pd
+import matplotlib.pyplot as plt
 import numpy as np
 import pickle
 import streamlit as st
@@ -46,8 +47,29 @@ def main():
         st.write('\n')
         st.subheader('Sepal Length, SepalWidth, Petal Length, dan Petal Width vs Species :')
         
-        if st.checkbox("Tampilkan/Sembunyikan Line Chart") :
-            st.line_chart( data[['SepalLengthCm','SepalWidthCm','PetalLengthCm','PetalWidthCm','Species']].head(10) )
+        if st.checkbox("Tampilkan/Sembunyikan Scatter Plot") :
+            #st.line_chart( data[['SepalLengthCm','SepalWidthCm','PetalLengthCm','PetalWidthCm','Species']].head(10) )
+            
+            if st.checkbox("Tampilkan/Sembunyikan Scatter Plot"):
+                fig, ax = plt.subplots(2, 2, figsize=(12, 8))
+
+                ax[0, 0].scatter(data['SepalLengthCm'].head(10), data['SepalWidthCm'].head(10), c=data['Species'].head(10), cmap='viridis')
+                ax[0, 0].set_xlabel('Sepal Length (Cm)')
+                ax[0, 0].set_ylabel('Sepal Width (Cm)')
+
+                ax[0, 1].scatter(data['PetalLengthCm'].head(10), data['PetalWidthCm'].head(10), c=data['Species'].head(10), cmap='viridis')
+                ax[0, 1].set_xlabel('Petal Length (Cm)')
+                ax[0, 1].set_ylabel('Petal Width (Cm)')
+
+                ax[1, 0].scatter(data['SepalLengthCm'].head(10), data['PetalLengthCm'].head(10), c=data['Species'].head(10), cmap='viridis')
+                ax[1, 0].set_xlabel('Sepal Length (Cm)')
+                ax[1, 0].set_ylabel('Petal Length (Cm)')
+
+                ax[1, 1].scatter(data['SepalWidthCm'].head(10), data['PetalWidthCm'].head(10), c=data['Species'].head(10), cmap='viridis')
+                ax[1, 1].set_xlabel('Sepal Width (Cm)')
+                ax[1, 1].set_ylabel('Petal Width (Cm)')
+
+                st.pyplot()
         
     else :
         st.header("Pemindai Spesies Bunga Iris Menggunakan Algoritma K-Nearest Neighbour (KNN)")
