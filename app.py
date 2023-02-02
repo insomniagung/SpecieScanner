@@ -1,4 +1,3 @@
-import sklearn
 import pandas as pd
 import numpy as np
 import pickle
@@ -8,7 +7,7 @@ import time
 pickle_in = open('knn_model.pkl', 'rb')
 knn = pickle.load(pickle_in)
 
-st.set_page_config(page_title="IrisPredictKNN Apps")
+st.set_page_config(page_title="SpecieScanner Apps")
 
 def prediction(SepalLengthCm, SepalWidthCm, PetalLengthCm, PetalWidthCm):
     prediction = knn.predict([[SepalLengthCm, SepalWidthCm, PetalLengthCm, PetalWidthCm]])
@@ -16,7 +15,7 @@ def prediction(SepalLengthCm, SepalWidthCm, PetalLengthCm, PetalWidthCm):
     return prediction
 
 def main():
-    st.title("Prediksi Spesies Bunga Iris Menggunakan Algoritma K-Nearest Neighbour")
+    st.title("SpecieScanner - Aplikasi Prediksi Spesies Bunga Iris Menggunakan Algoritma K-Nearest Neighbour (KNN)")
     #st.markdown("<strong><span style='color:blue'>&nbsp;Agung Gunawan / 2019230012</span></strong>", unsafe_allow_html=True)
     st.markdown("By: Agung Gunawan")
     st.write('\n')
