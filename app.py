@@ -26,7 +26,8 @@ def main():
     
     if app_menu == 'Home':
         st.title("SpecieScan Apps")
-        st.markdown("Selamat Datang.")
+        st.header("Selamat Datang! Aplikasi ini berfungsi untuk memindai Spesies Bunga Iris berdasarkan Algoritma K-Nearest Neighbour (KNN)")
+        st.markdown("By: Agung Gunawan | https://github.com/insomniagung/")
         
         st.image('images/homepic.jpg')
         st.write('\n')
@@ -56,8 +57,8 @@ def main():
         #st.line_chart( data[['SepalLengthCm','SepalWidthCm','PetalLengthCm','PetalWidthCm','Species']].head(10) )
         
     else :
-        st.header("Pemindai Spesies Bunga Iris Menggunakan Algoritma K-Nearest Neighbour (KNN)")
-        st.markdown("By: Agung Gunawan | https://github.com/insomniagung/")
+        st.header("Tekan tombol pindai untuk mengetahui hasilnya.")
+        #st.markdown("By: Agung Gunawan | https://github.com/insomniagung/")
         st.write('\n')
         st.image("images/irisflowers.png", width=700)
         st.write('\n')
