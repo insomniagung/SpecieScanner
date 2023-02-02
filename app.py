@@ -47,6 +47,13 @@ def main():
         st.write('\n')
         st.subheader('Sepal Length, SepalWidth, Petal Length, dan Petal Width vs Species :')
         
+        if st.checkbox("Tampilkan/Sembunyikan Bar Chart"):
+            species_counts = data['Species'].value_counts()
+            plt.bar(species_counts.index, species_counts.values)
+            plt.xlabel('Species')
+            plt.ylabel('Count')
+            st.pyplot()
+        
         if st.checkbox("Tampilkan/Sembunyikan Scatter Plot") :
             #st.line_chart( data[['SepalLengthCm','SepalWidthCm','PetalLengthCm','PetalWidthCm','Species']].head(10) )
             
