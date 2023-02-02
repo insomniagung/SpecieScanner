@@ -20,9 +20,7 @@ def main():
     app_menu = st.sidebar.selectbox['Home', menu]
     
     if app_menu == 'Home':
-        def welcome():
-            print("Welcome")
-            return welcome
+        st.write("Welcome to the Home page")
         
     elif app_menu == 'Scan' :
         st.header("Pemindai Spesies Bunga Iris Menggunakan Algoritma K-Nearest Neighbour (KNN)")
