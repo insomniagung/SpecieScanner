@@ -15,8 +15,9 @@ def prediction(SepalLengthCm, SepalWidthCm, PetalLengthCm, PetalWidthCm):
     return prediction
 
 def main():
-    st.title("SpecieScanner - Aplikasi Prediksi Spesies Bunga Iris Menggunakan Algoritma K-Nearest Neighbour (KNN)")
-    #st.markdown("<strong><span style='color:blue'>&nbsp;Agung Gunawan / 2019230012</span></strong>", unsafe_allow_html=True)
+    st.title("SpecieScanner Apps")
+    st.title("Prediksi Spesies Bunga Iris Menggunakan Algoritma K-Nearest Neighbour (KNN)")
+    
     st.markdown("By: Agung Gunawan")
     st.write('\n')
     
