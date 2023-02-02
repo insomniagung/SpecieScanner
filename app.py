@@ -23,7 +23,8 @@ def main():
     st.write('\n')
     st.write('\n')
     
-    st.sidebar.title("SPECIESCANNER")
+    st.sidebar.title("SpecieScanner Apps")
+    st.write('\n')
     st.sidebar.markdown("<strong>Sebelum memindai, isi data berikut :</strong>", 
                         unsafe_allow_html=True)
     SepalLengthCm = st.sidebar.number_input(label="Sepal Length (cm)", step=1., format="%.1f")
