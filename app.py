@@ -43,8 +43,9 @@ def main():
             st.write(data.tail(10))
         
         st.mardkdown('Berdasarkan atribut Sepal Length, SepalWidth, Petal Length, dan Petal Width, akan menghasilkan target/class Species :')
+        
         if st.checkbox("Tampilkan/Sembunyikan Line Chart") :
-            chart_data = pd.DataFrame(np.random.randn(20, 3), columns=['SepalLengthCm','SepalWidthCm','PetalLengthCm','PetalWidthCm','Species'])
+            chart_data = pd.DataFrame(np.random.randn(20, 3), data=['SepalLengthCm','SepalWidthCm','PetalLengthCm','PetalWidthCm','Species'])
             st.line_chart(chart_data)
             
             #st.line_chart(data[['SepalLengthCm','SepalWidthCm','PetalLengthCm','PetalWidthCm','Species']].head(10))
