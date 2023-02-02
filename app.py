@@ -32,7 +32,7 @@ def main():
         
         st.markdown('Dataset :')
         data = pd.read_csv('iris.csv')
-        st.write(data.head())
+        st.write(data)
         
         st.mardkdown('Berdasarkan atribut Sepal Length, SepalWidth, Petal Length, dan Petal Width, akan menghasilkan target/class Species :')
         st.line_chart(data[['SepalLengthCm','SepalWidthCm','PetalLengthCm','PetalWidthCm','Species']].head(10))
