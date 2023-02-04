@@ -75,6 +75,9 @@ def main():
         PetalLengthCm = st.sidebar.number_input(label="Petal Length (cm)", step=1., format="%.1f")
         PetalWidthCm = st.sidebar.number_input(label="Petal Width (cm)", step=1., format="%.1f")
         result =""
+        
+        st.sidebar.write('\n')
+        st.sidebar.write('\n')
     
         st.write('\n')
         if st.button("PINDAI SPESIES"):
