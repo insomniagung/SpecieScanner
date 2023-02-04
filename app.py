@@ -78,6 +78,8 @@ def main():
         
         st.sidebar.write('\n')
         st.sidebar.write('\n')
+        st.sidebar.write('\n')
+        st.sidebar.write('\n')        
     
         st.write('\n')
         if st.button("PINDAI SPESIES"):
